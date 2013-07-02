@@ -1,0 +1,62 @@
+#linkList {	
+	left: 661px; 	
+	padding-top: 15em;
+	position: absolute;
+	top: 130px;	
+	width: 285px;
+	z-index: 10;
+
+}
+
+#intro, 
+#supportingText
+ {
+	padding: 0 69px 0 60px;
+	width: 545px;	
+}
+
+#intro {	
+	background: no-repeat left top;
+	padding-top: 135px;
+}
+
+#container { 
+	background: transparent  repeat-y right top;
+	width: 700px;		
+}
+
+#quickSummary .p2 {
+	background: transparent url(../images/nav_dl.gif) top left no-repeat;
+	display: block;
+	font-size: .6em;
+	font-weight: bold;
+	left: 661px;
+	line-height: 1.4em;
+	padding: 40px 40px 0 30px;
+	position: absolute;
+	top: 160px;
+	width: 200px;
+	z-index: 20;
+}
+
+#quickSummary .p2 a:link,
+#quickSummary .p2 a:visited {	
+	background: transparent;
+	text-decoration: none; 
+}
+
+.foot-box {
+	text-align: center;
+	font-size: 10px;
+	color: #464749;
+	padding: 10px 0px 2px 0px;
+	width: 670px;
+	margin: 0px 0px 0px 30px;
+	background-color:#FFFFFF;
+	border:solid 1px #000000;
+}
+
+.standard {
+	margin: 0px 0px 8px 0px;
+	line-height: 140%;
+}

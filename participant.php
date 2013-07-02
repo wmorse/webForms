@@ -1,6 +1,9 @@
 <?php
 /*
  * Created on Aug 4, 2005
+ * 
+ * Updated 2013-06-24 --This page is the old "landing page showing the schedule in a grid.
+ * Something like this may still be needed.
  */
 $LANGUAGEUTILREPORTS = "%Utilization Report";
 $INTERNSHIPREPORTS = "%Internship Report";
@@ -90,7 +93,6 @@ $sqlGetSchedule = "SELECT DATE_FORMAT(s.dateDue,'%b %e') as dateDue, "
 				. "m.isCommitted,  s.isActive , m.userScheduleMapID, s.dateDue as ddate, " 
 				. "(NOW()>s.dateDue) as IsPassed "
 				. "FROM schedule s "
-//				. "JOIN inviteList i ON i.surveyID = s.surveyID "
 				. "JOIN survey v ON v.surveyID = s.surveyID "
 				. "JOIN userScheduleMap m ON s.scheduleID = m.scheduleID "
 				. "WHERE v.surveyTitle LIKE '$INTERNSHIPREPORTS' "
