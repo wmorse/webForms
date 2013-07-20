@@ -15,14 +15,18 @@ page in this application.
 
 if(!defined("LOADED_HEADER"))
 {
-	if(defined('ROOT_PATH')){
-		define('INCLUDE_PATH', ROOT_PATH . '/includes/');
-	}else 	{
+	if(substr(PHP_OS,0,3) == "WIN"){
 		define('INCLUDE_PATH', './includes/');
+	}else 	{
+		if(defined('ROOT_PATH')){
+		define('INCLUDE_PATH', ROOT_PATH . '/includes/');
+		}
 	}
 
 	$includePath = get_include_path();
-	set_include_path( $includePath . ":" . INCLUDE_PATH);
+//	set_include_path( $includePath . ":" . INCLUDE_PATH);
+//	set_include_path('/includes/');
+	set_include_path(INCLUDE_PATH);
 	include ("basic.php");
 	include ("appConfig.php");
 	dbconnect($GLOBAL_DATABASE,$GLOBAL_DATABASE_USER,$GLOBAL_DATABASE_PASSWORD,$GLOBAL_DATABASE_URL);
